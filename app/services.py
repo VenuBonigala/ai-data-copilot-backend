@@ -11,7 +11,7 @@ def process_query(user_input: str):
       if any(word in user_input.lower() for word in dangerous_keywords):
             return {
                   "type": "text",
-                  "message": "⚠️ This action is restricted for safety. Data modification queries are not allowed."
+                  "message": "This action is restricted for safety. Data modification queries are not allowed."
             }
       try:
             decision = decide_and_generate(user_input)
